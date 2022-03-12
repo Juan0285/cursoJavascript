@@ -2,20 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Simulador de préstamos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
     
 </head>
 <body>
-    <h1>CLASE 4</h1>
     
-    <h3>Arrays y Funciones de alto orden</h3>
-    
-    <script src="js/variables.js"></script>
-    <script src="js/prestamo.js"></script>
-    <script src="js/salario.js"></script>
-    <script src="js/cuota.js"></script>
-    <script src="js/clases.js"></script>
+    <div class="contenedor">
+        <header class="header flex">
+            <h1>CLASE 4</h1>
+            <h3>Arrays y Funciones de alto orden</h3>
+        </header>
+        <main class="main flex">
+            <form class="flex1" action="">
 
-</body>
+                <label for="nombre">Nombre:
+                <input id="nombre" type="text" name="nombre">
+                </label>  
+                  
+                <label for="prestamo">Prestamo:
+                <input id="prestamo" type="number" name="num">
+                </label>
+
+                <label for="salario">Salario:
+                <input id="salario" type="number" name="num2">
+                </label>
+
+                <input class="padding" type="button" value="pedir prestamo">
+
+            </form>
+        </main>
+        <footer class="footer flex">
+            <h3>Rojas Juan Gabriel -- Simulador de Prestamos</h3>
+        </footer>
+    </div>
+
+        <!-- <script src="js/prueba.js"></script> -->
+        <script src="js/saludo.js"></script>
+        <script src="js/variables.js"></script>
+        <script src="js/prestamo.js"></script>
+        <script src="js/salario.js"></script>
+        <script src="js/cuota.js"></script>
+        <script src="js/clases.js"></script>
+
+    </body>
 </html>

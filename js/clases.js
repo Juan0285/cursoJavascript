@@ -1,14 +1,14 @@
 
-
-
-class Calculador { // ingresan dos parametros: el prestamo solicitado y el salario del usuario
-    constructor(prestamo , salario){
-    this.prestamo = prestamo;
-    this.salario = salario;
-
+// debugger
+class Calculador { // ingresan dos parametros: el nombre de usuario, el prestamo solicitado y el salario del usuario
+    constructor( saludo, prestamo , salario){
+        this.saludo = saludo;
+        this.prestamo = prestamo;
+        this.salario = salario;
+        
     } 
-    
 
+        
     calcularPrestamo() {
 
         if (this.salario >=30000){ // si el salario es mayor o igual a 30001, eres apto para el prestamo.
@@ -33,16 +33,26 @@ class Calculador { // ingresan dos parametros: el prestamo solicitado y el salar
     mostrarPrestamo() {  // si el metodo calcular prestamo dió bien, entonces lo muestro en el documento, sino, sale por consola un mensaje de advertencia de que no eres apto para el crédito.
 
         if (this.calcularPrestamo()) {
-            document.write ("el crédito de $" + this.prestamo + " , lo pagás en " + cuota() + " cuotas de $" +  this.calcularPrestamo() );
+            console.log (`${this.saludo} el crédito de $ ${this.prestamo}, lo pagás en  ${cuota()} cuotas de $ ${this.calcularPrestamo()}`);
         } else {
-            console.warn ("Lo siento no podemos darte un prestamo");
+            console.warn (`Lo siento ${this.saludo} no podemos darte un prestamo`);
         }
     }    
     
+    chequearSiExiste() { // si el parámetro saludo, que equivale al nombre ingresado por prompt que se compara contra un array de nombrees registrados da verdadero, entonces se calcula el prestamo y despues se lomuestr por consola.
+        if (!this.saludo) {
+            console.log("no puede continuar")
+        } else {
+            this.calcularPrestamo()
+            this.mostrarPrestamo();
+        }
+    }
+
+
+   
+    
 }
 
-const miPrestamo = new Calculador (solicitarPrestamo(), salario () );
-miPrestamo.mostrarPrestamo();
-
-
+const miPrestamo = new Calculador ( existe(existeFem, existeMas) , solicitarPrestamo(), salario (),);
+miPrestamo.chequearSiExiste();
 
